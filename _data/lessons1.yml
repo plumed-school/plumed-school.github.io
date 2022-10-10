@@ -1,0 +1,16 @@
+# file containing lesson database.
+- id: '21.006'
+  title: Dimensionality reduction
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: An introduction to tehcniques such as dimensionality reduction, path collective variables and indistinguishablity that you may need to use in your own research projects
+- id: '21.004'
+  title: Metadynamics
+  path: lessons/21/004/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: How to calculate statistical averages and free energy surfaces using metadynamics
+- id: '21.002'
+  title: Statistical errors in MD
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.

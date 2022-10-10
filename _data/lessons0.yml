@@ -1,0 +1,21 @@
+# file containing lesson database.
+- id: '21.007'
+  title: Optimizing PLUMED performances
+  path: lessons/21/007/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: Some lessons on monitoring and improving the performance of PLUMED and gromacs
+- id: '21.005'
+  title: Replica exchange methods
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: Runninge umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+- id: '21.003'
+  title: Umbrella Sampling
+  path: lessons/21/003/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: How to calculate statistical averages and free energy surfaces using umbrella sampling
+- id: '21.001'
+  title: PLUMED syntax and analysis
+  path: lessons/21/001/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: Basic features of the PLUMED input syntax with a particular focus on PBCs and selection tools
