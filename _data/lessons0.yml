@@ -1,0 +1,61 @@
+# file containing lesson database.
+- id: '23.004'
+  title: Rewriting the coordination for plumed in Cuda
+  path: lessons/23/004/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  description: How I reimplemented a basic version of the CV Coordination with cuda
+  actions: 
+- id: '23.002'
+  title: Introduction to the plumed parallel features avaiable to the developers
+  path: lessons/23/002/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  description: A simple presentation of some of the avaiable features in plumed to simplify the interface with OpenMP and MPI. The lesson contains also a very simple example in how to implement a  cuda CV.
+  actions: 
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  actions: SASA_HASEL ALPHARMSD PRINT PARABETARMSD MOLINFO BIASVALUE GYRATION ANTIBETARMSD
+- id: '22.010'
+  title: Hamiltonian replica exchange with PLUMED and GROMACS
+  path: lessons/22/010/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: An introduction to running Hamiltonian replica exchange calculations using PLUMED and GROMACS.
+  actions: MOLINFO PRINT TORSION
+- id: '22.007'
+  title: Learning and enhancing fluctuations along information bottleneck for automated enhanced sampling
+  path: lessons/22/007/data/NAVIGATION.html
+  instructors: Pratyush Tiwary
+  description: An introduction to the state predictive information bottleneck (SPIB) deep-learning-based framework for learning reaction coordinates from high dimensional molecular simulation trajectories.
+  actions: 
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  actions: ECV_MULTITHERMAL OPES_METAD_EXPLORE OPES_EXPANDED ENERGY TORSION OPES_METAD ECV_UMBRELLAS_LINE
+- id: '21.007'
+  title: Optimizing PLUMED performances
+  path: lessons/21/007/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: Some lessons on monitoring and improving the performance of PLUMED and gromacs
+  actions: DEBUG COMBINE WHOLEMOLECULES CUSTOM PRINT COORDINATION RMSD DISTANCE GROUP METAD EFFECTIVE_ENERGY_DRIFT
+- id: '21.005'
+  title: Replica exchange methods
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: Runninge umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+  actions: RANDOM_EXCHANGES PRINT MOLINFO TORSION METAD RESTRAINT
+- id: '21.003'
+  title: Umbrella Sampling
+  path: lessons/21/003/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: How to calculate statistical averages and free energy surfaces using umbrella sampling
+  actions: CUSTOM HISTOGRAM CONVERT_TO_FES PRINT MOLINFO BIASVALUE TORSION REWEIGHT_BIAS READ RESTRAINT DUMPGRID
+- id: '21.001'
+  title: PLUMED syntax and analysis
+  path: lessons/21/001/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: Basic features of the PLUMED input syntax with a particular focus on PBCs and selection tools
+  actions: DUMPATOMS WHOLEMOLECULES ALPHARMSD ANTIBETARMSD PRINT PARABETARMSD MOLINFO GYRATION TORSION CENTER DISTANCE COMBINE

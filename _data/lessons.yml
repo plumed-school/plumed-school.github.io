@@ -1,0 +1,122 @@
+# file containing lesson database.
+- id: '23.004'
+  title: Rewriting the coordination for plumed in Cuda
+  path: lessons/23/004/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  description: How I reimplemented a basic version of the CV Coordination with cuda
+  actions: 
+- id: '23.002'
+  title: Introduction to the plumed parallel features avaiable to the developers
+  path: lessons/23/002/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  description: A simple presentation of some of the avaiable features in plumed to simplify the interface with OpenMP and MPI. The lesson contains also a very simple example in how to implement a  cuda CV.
+  actions: 
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  actions: SASA_HASEL ALPHARMSD PRINT PARABETARMSD MOLINFO BIASVALUE GYRATION ANTIBETARMSD
+- id: '22.010'
+  title: Hamiltonian replica exchange with PLUMED and GROMACS
+  path: lessons/22/010/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: An introduction to running Hamiltonian replica exchange calculations using PLUMED and GROMACS.
+  actions: MOLINFO PRINT TORSION
+- id: '22.007'
+  title: Learning and enhancing fluctuations along information bottleneck for automated enhanced sampling
+  path: lessons/22/007/data/NAVIGATION.html
+  instructors: Pratyush Tiwary
+  description: An introduction to the state predictive information bottleneck (SPIB) deep-learning-based framework for learning reaction coordinates from high dimensional molecular simulation trajectories.
+  actions: 
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  actions: ECV_MULTITHERMAL OPES_METAD_EXPLORE OPES_EXPANDED ENERGY TORSION OPES_METAD ECV_UMBRELLAS_LINE
+- id: '21.007'
+  title: Optimizing PLUMED performances
+  path: lessons/21/007/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: Some lessons on monitoring and improving the performance of PLUMED and gromacs
+  actions: DEBUG COMBINE WHOLEMOLECULES CUSTOM PRINT COORDINATION RMSD DISTANCE GROUP METAD EFFECTIVE_ENERGY_DRIFT
+- id: '21.005'
+  title: Replica exchange methods
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: Runninge umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+  actions: RANDOM_EXCHANGES PRINT MOLINFO TORSION METAD RESTRAINT
+- id: '21.003'
+  title: Umbrella Sampling
+  path: lessons/21/003/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: How to calculate statistical averages and free energy surfaces using umbrella sampling
+  actions: CUSTOM HISTOGRAM CONVERT_TO_FES PRINT MOLINFO BIASVALUE TORSION REWEIGHT_BIAS READ RESTRAINT DUMPGRID
+- id: '21.001'
+  title: PLUMED syntax and analysis
+  path: lessons/21/001/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: Basic features of the PLUMED input syntax with a particular focus on PBCs and selection tools
+  actions: DUMPATOMS WHOLEMOLECULES ALPHARMSD ANTIBETARMSD PRINT PARABETARMSD MOLINFO GYRATION TORSION CENTER DISTANCE COMBINE
+# file containing lesson database.
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  actions: 
+- id: '23.001'
+  title: Developments in PLUMED
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  actions: SORT CUSTOM LOCAL_Q1 MORE_THAN CLUSTER_PROPERTIES PAIRENTROPY CONCATENATE Q6 CLUSTER_WEIGHTS COM SPHERICAL_HARMONIC OUTER_PRODUCT FIXEDATOM MATRIX_PRODUCT SUM GATHER_REPLICAS CONSTANT RDF DISTANCES RESTRAINT TORSIONS DFSCLUSTERING DIAGONALIZE MEAN TORSION BIASVALUE REFERENCE_GRID A1_DENOM PRINT ONES DOMAIN_DECOMPOSITION CONTACT_MATIX GROUP VSTACK AVERAGE SPRINT COORDINATIONNUMBER DISTANCE INSPHERE KDE TRANSPOSE Q4 INTEGRATE_GRID MATRIX_VECTOR_PRODUCT DUMPGRID COMBINE GSYMFUNC_THREEBODY Q1 CONTACT_MATRIX MATHEVAL FIXED_ATOM HISTOGRAM ACCUMULATE LOCAL_AVERAGE LESS_THAN
+- id: '22.012'
+  title: Free energy calculations in crystalline solids
+  path: lessons/22/012/data/NAVIGATION.html
+  instructors: Pablo Piaggi
+  description: An introduction to the Environmental similarity CV and the calculation of chemical potentials of liquids and solids
+  actions: UPPER_WALLS DUMPGRID OPES_METAD Q6 MATHEVAL HISTOGRAM LOWER_WALLS ENVIRONMENTSIMILARITY
+- id: '22.008'
+  title: Modelling Concentration-driven processes with PLUMED
+  path: lessons/22/008/data/NAVIGATION.html
+  instructors: Matteo Salvalaglio
+  description: An introduction to the tools that are available in PLUMED for simulating concentration-driven processes such as nucleation, growth and diffusion.
+  actions: DFSCLUSTERING FLUSH CLUSTER_NATOMS CMUMD PRINT GROUP COORDINATIONNUMBER CONTACT_MATRIX CLUSTER_DISTRIBUTION RESTRAINT
+- id: '22.005'
+  title: Machine learning collective variables with PyTorch
+  path: lessons/22/005/data/NAVIGATION.html
+  instructors: Luigi Bonati
+  description: An introduction to designing data-driven CVs using two methods (DeepLDA and DeepTICA).
+  actions: PRINT TORSION PYTORCH_MODEL
+- id: '22.002'
+  title: Analysis of Plumed output by Metadynminer
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulatiosn
+  actions: 
+- id: '21.006'
+  title: Dimensionality reduction
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: An introduction to tehcniques such as dimensionality reduction, path collective variables and indistinguishablity that you may need to use in your own research projects
+  actions: CLASSICAL_MDS UNITS PCAVARS FCCUBIC PATH MOLINFO RMSD COMMITTOR DUMPMULTICOLVAR PROJECT_ALL_ANALYSIS_DATA COLLECT_FRAMES TORSION PRINT COORDINATIONNUMBER PCA EUCLIDEAN_DISSIMILARITIES ANTIBETARMSD OUTPUT_ANALYSIS_DATA_TO_COLVAR MTRANSFORM_MORE DUMPGRID PARABETARMSD LANDMARK_SELECT_FPS OUTPUT_ANALYSIS_DATA_TO_PDB ALPHARMSD SKETCH_MAP HISTOGRAM
+- id: '21.004'
+  title: Metadynamics
+  path: lessons/21/004/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: How to calculate statistical averages and free energy surfaces using metadynamics
+  actions: REWEIGHT_BIAS TORSION DUMPGRID PRINT METAD MOLINFO CONVERT_TO_FES HISTOGRAM
+- id: '21.002'
+  title: Statistical errors in MD
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.
+  actions: UPPER_WALLS REWEIGHT_BIAS DUMPGRID CUSTOM PRINT METAD CONVERT_TO_FES READ AVERAGE CONSTANT HISTOGRAM COM UNITS DISTANCE COORDINATIONNUMBER RESTRAINT
+- id: '20.001'
+  title: Installing PLUMED
+  path: lessons/20/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: An interactive tutorial resource on compiling PLUMED and linking it with MD codes.
+  actions: 
