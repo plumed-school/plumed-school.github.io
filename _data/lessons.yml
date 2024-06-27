@@ -1,0 +1,212 @@
+# file containing lesson database.
+- id: '24.001'
+  title: hybrid Small Angle Scattering — hands-on guide
+  path: lessons/24/001/data/NAVIGATION.html
+  instructors: Federico Ballabio
+  description: Practical guide to the use of the hySAS module.
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  actions: MOLINFO STATS ENSEMBLE GYRATION BIASVALUE SAXS RESTRAINT PRINT
+  modules: function generic colvar bias isdb
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+- id: '23.001'
+  title: Developments in PLUMED
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  ninputs: 97
+  nfail: 84
+  nfailm: 0
+  actions: CLUSTER_WEIGHTS DIFFERENCE WHOLEMOLECULES CONCATENATE RMSD CONTACT_MATRIX SORT COORDINATIONNUMBER MORE_THAN COM SUM Q4 TORSION CONSTANT DISTANCE DISTANCE_MATRIX GROUP MATRIX_PRODUCT VSTACK LESS_THAN DIAGONALIZE BIASVALUE OUTER_PRODUCT ONES GATHER_REPLICAS DUMPGRID SELECT_COMPONENTS COMBINE TRANSPOSE LOCAL_Q1 VOLUME DISPLACEMENT MATRIX_VECTOR_PRODUCT LOWEST DOMAIN_DECOMPOSITION MEAN INSPHERE INTEGRATE_GRID RDF GEOMETRIC_PATH DFSCLUSTERING SPHERICAL_HARMONIC ACCUMULATE KDE RMSD_VECTOR Q1 POSITION CUSTOM DISTANCES PCAVARS RESTRAINT LOCAL_AVERAGE INTERPOLATE_GRID PAIRENTROPY REFERENCE_GRID GSYMFUNC_THREEBODY PRINT CENTER HISTOGRAM PATH SPRINT AVERAGE GPATH CLUSTER_PROPERTIES PDB2CONSTANT Q6 EUCLIDEAN_DISTANCE FIXEDATOM
+  modules: refdist matrixtools multicolvar function valtools generic clusters adjmat colvar vatom core bias gridtools sprint mapping symfunc volumes
+- id: '22.012'
+  title: Free energy calculations in crystalline solids
+  path: lessons/22/012/data/NAVIGATION.html
+  instructors: Pablo Piaggi
+  description: An introduction to the Environmental similarity CV and the calculation of chemical potentials of liquids and solids
+  ninputs: 8
+  nfail: 5
+  nfailm: 5
+  actions: MEAN MATHEVAL MATRIX_VECTOR_PRODUCT ONES LOWER_WALLS DUMPGRID CUSTOM UPPER_WALLS MORE_THAN Q6 SUM OPES_METAD DISTANCE_MATRIX ENVIRONMENTSIMILARITY GROUP HISTOGRAM
+  modules: matrixtools function envsim opes generic adjmat bias core gridtools symfunc
+- id: '22.008'
+  title: Modelling Concentration-driven processes with PLUMED
+  path: lessons/22/008/data/NAVIGATION.html
+  instructors: Matteo Salvalaglio
+  description: An introduction to the tools that are available in PLUMED for simulating concentration-driven processes such as nucleation, growth and diffusion.
+  ninputs: 4
+  nfail: 3
+  nfailm: 3
+  actions: MEAN CLUSTER_NATOMS DFSCLUSTERING ONES FLUSH COORDINATIONNUMBER CONTACT_MATRIX MORE_THAN SUM RESTRAINT CLUSTER_DISTRIBUTION MATRIX_VECTOR_PRODUCT GROUP PRINT
+  modules: matrixtools function generic clusters adjmat bias core symfunc
+- id: '22.005'
+  title: Machine learning collective variables with PyTorch
+  path: lessons/22/005/data/NAVIGATION.html
+  instructors: Luigi Bonati
+  description: An introduction to designing data-driven CVs using two methods (DeepLDA and DeepTICA).
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  actions: PYTORCH_MODEL TORSION PRINT
+  modules: generic pytorch colvar
+- id: '22.002'
+  title: Analysis of Plumed output by Metadynminer
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulatiosn
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+- id: '21.006'
+  title: Dimensionality reduction
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: An introduction to tehcniques such as dimensionality reduction, path collective variables and indistinguishablity that you may need to use in your own research projects
+  ninputs: 11
+  nfail: 6
+  nfailm: 0
+  actions: COLLECT_FRAMES SKETCHMAP RMSD UNITS COORDINATIONNUMBER PCA TORSION PROJECT_POINTS MORE_THAN GROUP COMMITTOR DUMPGRID ANTIBETARMSD CLASSICAL_MDS MOLINFO PCAVARS ALPHARMSD PATH PARABETARMSD PRINT HISTOGRAM DUMPVECTOR FCCUBIC LANDMARK_SELECT_FPS DUMPMULTICOLVAR DUMPPDB
+  modules: multicolvar function generic landmarks colvar core dimred gridtools secondarystructure mapping symfunc setup
+- id: '21.004'
+  title: Metadynamics
+  path: lessons/21/004/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: How to calculate statistical averages and free energy surfaces using metadynamics
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  actions: MOLINFO METAD REWEIGHT_BIAS DUMPGRID TORSION CONVERT_TO_FES HISTOGRAM PRINT
+  modules: generic gridtools colvar bias
+- id: '21.002'
+  title: Statistical errors in MD
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.
+  ninputs: 8
+  nfail: 0
+  nfailm: 0
+  actions: METAD REWEIGHT_BIAS AVERAGE DUMPGRID READ UNITS CUSTOM UPPER_WALLS COORDINATIONNUMBER COM RESTRAINT CONVERT_TO_FES CONSTANT DISTANCE HISTOGRAM PRINT
+  modules: function generic colvar vatom bias gridtools symfunc setup
+- id: '20.001'
+  title: Installing PLUMED
+  path: lessons/20/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: An interactive tutorial resource on compiling PLUMED and linking it with MD codes.
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+# file containing lesson database.
+- id: '23.004'
+  title: Rewriting the coordination for plumed in Cuda
+  path: lessons/23/004/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  description: How I reimplemented a basic version of the CV Coordination with cuda
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+- id: '23.002'
+  title: Introduction to the plumed parallel features avaiable to the developers
+  path: lessons/23/002/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  description: A simple presentation of some of the avaiable features in plumed to simplify the interface with OpenMP and MPI. The lesson contains also a very simple example in how to implement a  cuda CV.
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  actions: PRINT LESS_THAN PARABETARMSD SUM LOWEST MOLINFO BIASVALUE ANTIBETARMSD GYRATION SECONDARY_STRUCTURE_RMSD SASA_HASEL ALPHARMSD
+  modules: generic function secondarystructure sasa colvar bias
+- id: '22.010'
+  title: Hamiltonian replica exchange with PLUMED and GROMACS
+  path: lessons/22/010/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: An introduction to running Hamiltonian replica exchange calculations using PLUMED and GROMACS.
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  actions: TORSION PRINT MOLINFO
+  modules: colvar generic
+- id: '22.007'
+  title: Learning and enhancing fluctuations along information bottleneck for automated enhanced sampling
+  path: lessons/22/007/data/NAVIGATION.html
+  instructors: Pratyush Tiwary
+  description: An introduction to the state predictive information bottleneck (SPIB) deep-learning-based framework for learning reaction coordinates from high dimensional molecular simulation trajectories.
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  actions: TORSION OPES_EXPANDED ECV_UMBRELLAS_LINE ENERGY ECV_MULTITHERMAL OPES_METAD_EXPLORE OPES_METAD
+  modules: colvar opes
+- id: '21.007'
+  title: Optimizing PLUMED performances
+  path: lessons/21/007/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: Some lessons on monitoring and improving the performance of PLUMED and gromacs
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  actions: PRINT WHOLEMOLECULES COORDINATION METAD EFFECTIVE_ENERGY_DRIFT DISTANCE CUSTOM COMBINE GROUP DEBUG RMSD
+  modules: generic function core colvar bias
+- id: '21.005'
+  title: Replica exchange methods
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: Runninge umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  actions: PRINT RANDOM_EXCHANGES TORSION METAD MOLINFO RESTRAINT
+  modules: colvar generic bias
+- id: '21.003'
+  title: Umbrella Sampling
+  path: lessons/21/003/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  description: How to calculate statistical averages and free energy surfaces using umbrella sampling
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  actions: PRINT READ TORSION DUMPGRID MOLINFO BIASVALUE HISTOGRAM CONVERT_TO_FES CUSTOM REWEIGHT_BIAS RESTRAINT
+  modules: generic function gridtools colvar bias
+- id: '21.001'
+  title: PLUMED syntax and analysis
+  path: lessons/21/001/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: Basic features of the PLUMED input syntax with a particular focus on PBCs and selection tools
+  ninputs: 7
+  nfail: 2
+  nfailm: 2
+  actions: PRINT WHOLEMOLECULES TORSION PARABETARMSD MOLINFO ANTIBETARMSD GYRATION COMBINE DISTANCE CENTER DUMPATOMS ALPHARMSD
+  modules: generic function secondarystructure vatom colvar
