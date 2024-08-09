@@ -1,0 +1,230 @@
+{
+"adjmat" : {
+"type": "default-off",
+"depends" : ["core", "tools"]
+},
+"annfunc" : {
+"type": "default-off",
+"depends" : ["core", "function"]
+},
+"asmjit" : {
+"type": "always",
+"depends" : []
+},
+"bias" : {
+"type": "default-on",
+"depends" : ["core", "tools"]
+},
+"blas" : {
+"type": "always",
+"depends" : []
+},
+"cltools" : {
+"type": "default-on",
+"depends" : ["core", "config", "tools", "molfile", "xdrfile"]
+},
+"clusters" : {
+"type": "default-off",
+"depends" : ["core", "tools", "matrixtools", "multicolvar"]
+},
+"colvar" : {
+"type": "default-on",
+"depends" : ["core", "tools"]
+},
+"config" : {
+"type": "always",
+"depends" : []
+},
+"contour" : {
+"type": "default-off",
+"depends" : ["core", "tools", "gridtools"]
+},
+"core" : {
+"type": "always",
+"depends" : ["config", "tools", "lepton", "small_vector", "blas"]
+},
+"crystdistrib" : {
+"type": "default-off",
+"depends" : ["core", "tools", "colvar"]
+},
+"dimred" : {
+"type": "default-off",
+"depends" : ["core", "tools", "gridtools", "mapping"]
+},
+"drr" : {
+"type": "default-off",
+"depends" : ["core", "tools", "bias", "cltools", "config"]
+},
+"eds" : {
+"type": "default-off",
+"depends" : ["core", "tools", "bias"]
+},
+"envsim" : {
+"type": "default-off",
+"depends" : ["core", "tools", "multicolvar"]
+},
+"fisst" : {
+"type": "default-off",
+"depends" : ["core", "tools", "bias"]
+},
+"fourier" : {
+"type": "default-off",
+"depends" : ["core", "gridtools"]
+},
+"function" : {
+"type": "default-on",
+"depends" : ["core", "tools"]
+},
+"funnel" : {
+"type": "default-off",
+"depends" : ["core", "tools", "colvar", "bias"]
+},
+"generic" : {
+"type": "default-on",
+"depends" : ["core", "tools", "xdrfile"]
+},
+"gridtools" : {
+"type": "default-on",
+"depends" : ["core", "tools", "function", "lepton"]
+},
+"isdb" : {
+"type": "default-on",
+"depends" : ["bias", "colvar", "core", "tools", "function"]
+},
+"landmarks" : {
+"type": "default-off",
+"depends" : ["core", "tools", "matrixtools"]
+},
+"lapack" : {
+"type": "always",
+"depends" : ["blas"]
+},
+"lepton" : {
+"type": "always",
+"depends" : ["asmjit"]
+},
+"lib" : {
+"type": "always",
+"depends" : []
+},
+"logmfd" : {
+"type": "default-off",
+"depends" : ["core", "tools", "bias"]
+},
+"main" : {
+"type": "always",
+"depends" : ["wrapper"]
+},
+"mapping" : {
+"type": "default-off",
+"depends" : ["core", "tools", "colvar"]
+},
+"matrixtools" : {
+"type": "default-on",
+"depends" : ["core", "tools"]
+},
+"maze" : {
+"type": "default-off",
+"depends" : ["core", "tools", "colvar", "bias"]
+},
+"membranefusion" : {
+"type": "default-off",
+"depends" : ["core", "colvar"]
+},
+"metatensor" : {
+"type": "default-off",
+"depends" : ["core"]
+},
+"molfile" : {
+"type": "default-on",
+"depends" : []
+},
+"multicolvar" : {
+"type": "default-on",
+"depends" : ["core", "tools"]
+},
+"opes" : {
+"type": "default-off",
+"depends" : ["bias", "core", "tools"]
+},
+"pamm" : {
+"type": "default-off",
+"depends" : ["core", "tools", "multicolvar", "adjmat"]
+},
+"piv" : {
+"type": "default-off",
+"depends" : ["core", "tools", "colvar"]
+},
+"pytorch" : {
+"type": "default-off",
+"depends" : ["core", "function"]
+},
+"refdist" : {
+"type": "default-on",
+"depends" : ["core", "tools", "function"]
+},
+"s2cm" : {
+"type": "default-off",
+"depends" : ["core", "tools", "colvar"]
+},
+"sasa" : {
+"type": "default-off",
+"depends" : ["core", "config"]
+},
+"secondarystructure" : {
+"type": "default-on",
+"depends" : ["core", "tools"]
+},
+"setup" : {
+"type": "default-on",
+"depends" : ["core", "tools"]
+},
+"sizeshape" : {
+"type": "default-off",
+"depends" : ["core", "tools", "colvar"]
+},
+"small_vector" : {
+"type": "always",
+"depends" : []
+},
+"sprint" : {
+"type": "default-off",
+"depends" : ["core"]
+},
+"symfunc" : {
+"type": "default-off",
+"depends" : ["core", "tools", "multicolvar", "function"]
+},
+"tools" : {
+"type": "always",
+"depends" : ["core", "lapack", "lepton", "small_vector"]
+},
+"valtools" : {
+"type": "always",
+"depends" : ["core"]
+},
+"vatom" : {
+"type": "default-on",
+"depends" : ["core", "tools"]
+},
+"ves" : {
+"type": "default-off",
+"depends" : ["bias", "cltools", "core", "tools", "lepton"]
+},
+"volumes" : {
+"type": "default-off",
+"depends" : ["core", "tools"]
+},
+"wham" : {
+"type": "default-off",
+"depends" : ["core", "tools"]
+},
+"wrapper" : {
+"type": "always",
+"depends" : []
+},
+"xdrfile" : {
+"type": "default-on",
+"depends" : []
+}
+}

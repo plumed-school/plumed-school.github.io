@@ -1,0 +1,129 @@
+# file containing lesson database.
+- id: '24.001'
+  title: hybrid Small Angle Scattering — hands-on guide
+  path: lessons/24/001/data/NAVIGATION.html
+  instructors: Federico Ballabio
+  description: Practical guide to the use of the hySAS module.
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  actions: ENSEMBLE SAXS GYRATION RESTRAINT PRINT STATS MOLINFO BIASVALUE
+  modules: function generic colvar isdb bias
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+- id: '23.001'
+  title: Developments in PLUMED
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  ninputs: 97
+  nfail: 84
+  nfailm: 0
+  actions: TORSION Q1 LOWEST SELECT_COMPONENTS SUM OUTER_PRODUCT COM SPRINT LOCAL_Q1 RMSD COORDINATIONNUMBER ACCUMULATE PATH GEOMETRIC_PATH GROUP MORE_THAN CUSTOM CONTACT_MATRIX VSTACK BIASVALUE DISTANCE REFERENCE_GRID TRANSPOSE VOLUME PCAVARS PAIRENTROPY MATRIX_PRODUCT RESTRAINT PRINT SPHERICAL_HARMONIC HISTOGRAM PDB2CONSTANT GSYMFUNC_THREEBODY DFSCLUSTERING Q4 CLUSTER_WEIGHTS DISPLACEMENT COMBINE CLUSTER_PROPERTIES ONES SORT LOCAL_AVERAGE RDF DOMAIN_DECOMPOSITION DIFFERENCE CONSTANT INTEGRATE_GRID CONCATENATE MEAN KDE EUCLIDEAN_DISTANCE FIXEDATOM GPATH LESS_THAN Q6 DUMPGRID AVERAGE DISTANCE_MATRIX POSITION WHOLEMOLECULES RMSD_VECTOR DIAGONALIZE INTERPOLATE_GRID CENTER INSPHERE MATRIX_VECTOR_PRODUCT DISTANCES GATHER_REPLICAS
+  modules: function adjmat matrixtools vatom gridtools generic refdist colvar volumes symfunc valtools sprint core clusters multicolvar bias mapping
+- id: '22.012'
+  title: Free energy calculations in crystalline solids
+  path: lessons/22/012/data/NAVIGATION.html
+  instructors: Pablo Piaggi
+  description: An introduction to the Environmental similarity CV and the calculation of chemical potentials of liquids and solids
+  ninputs: 8
+  nfail: 5
+  nfailm: 5
+  depends: 
+    - 21/001
+    - 21/004
+    - 22/003
+  actions: DUMPGRID ONES Q6 DISTANCE_MATRIX UPPER_WALLS SUM OPES_METAD MATHEVAL ENVIRONMENTSIMILARITY GROUP HISTOGRAM CUSTOM MORE_THAN MATRIX_VECTOR_PRODUCT MEAN LOWER_WALLS
+  modules: adjmat function matrixtools opes gridtools generic symfunc core bias envsim
+- id: '22.008'
+  title: Modelling Concentration-driven processes with PLUMED
+  path: lessons/22/008/data/NAVIGATION.html
+  instructors: Matteo Salvalaglio
+  description: An introduction to the tools that are available in PLUMED for simulating concentration-driven processes such as nucleation, growth and diffusion.
+  ninputs: 4
+  nfail: 3
+  nfailm: 3
+  depends: 
+    - 21/001
+  actions: ONES SUM COORDINATIONNUMBER PRINT DFSCLUSTERING CLUSTER_DISTRIBUTION GROUP MORE_THAN MEAN CONTACT_MATRIX MATRIX_VECTOR_PRODUCT FLUSH RESTRAINT CLUSTER_NATOMS
+  modules: function adjmat matrixtools generic clusters core symfunc bias
+- id: '22.005'
+  title: Machine learning collective variables with PyTorch
+  path: lessons/22/005/data/NAVIGATION.html
+  instructors: Luigi Bonati
+  description: An introduction to designing data-driven CVs using two methods (DeepLDA and DeepTICA).
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  depends: 
+    - 21/001
+    - 22/003
+  actions: PRINT TORSION PYTORCH_MODEL
+  modules: pytorch generic colvar
+- id: '22.002'
+  title: Analysis of Plumed output by Metadynminer
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulatiosn
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/004
+  actions: 
+  modules: 
+- id: '21.006'
+  title: Dimensionality reduction
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: An introduction to tehcniques such as dimensionality reduction, path collective variables and indistinguishablity that you may need to use in your own research projects
+  ninputs: 11
+  nfail: 6
+  nfailm: 0
+  depends: 
+    - 21/001
+  actions: TORSION RMSD PATH FCCUBIC DUMPMULTICOLVAR COORDINATIONNUMBER PCA GROUP MORE_THAN COLLECT_FRAMES DUMPVECTOR LANDMARK_SELECT_FPS PCAVARS PARABETARMSD PRINT DUMPPDB HISTOGRAM MOLINFO PROJECT_POINTS COMMITTOR DUMPGRID UNITS ALPHARMSD CLASSICAL_MDS ANTIBETARMSD SKETCHMAP
+  modules: function dimred setup landmarks generic gridtools colvar symfunc core secondarystructure multicolvar mapping
+- id: '21.004'
+  title: Metadynamics
+  path: lessons/21/004/data/NAVIGATION.html
+  instructors: Max Bonomi
+  description: How to calculate statistical averages and free energy surfaces using metadynamics
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/003
+    - 21/002
+  actions: TORSION DUMPGRID REWEIGHT_BIAS METAD PRINT HISTOGRAM CONVERT_TO_FES MOLINFO
+  modules: bias gridtools generic colvar
+- id: '21.002'
+  title: Statistical errors in MD
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.
+  ninputs: 8
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/001
+  actions: DUMPGRID DISTANCE AVERAGE REWEIGHT_BIAS READ UPPER_WALLS UNITS COM CONSTANT METAD RESTRAINT PRINT COORDINATIONNUMBER HISTOGRAM CONVERT_TO_FES CUSTOM
+  modules: function setup vatom gridtools generic colvar symfunc bias
+- id: '20.001'
+  title: Installing PLUMED
+  path: lessons/20/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  description: An interactive tutorial resource on compiling PLUMED and linking it with MD codes.
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
