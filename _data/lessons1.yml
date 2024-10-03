@@ -1,0 +1,162 @@
+# file containing lesson database.
+- id: '24.008'
+  title: Using the maze module
+  shortitle: 'Using the maze ...'
+  path: lessons/24/008/data/NAVIGATION.html
+  instructors: Jakub Rydzewski
+  doi: 10.1063/1.5108638
+  reference: 'J. Rydzewski, O. Valsson, Finding multiple reaction pathways of ligand unbinding. The Journal of Chemical Physics. 150 (2019)'
+  ref_url: 'http://dx.doi.org/10.1063/1.5108638'
+  description: Sampling ligand-protein dissociation using the maze module
+  tags: protein, ligand, dissociation, unbinding, maze
+  ninputs: 4
+  nfail: 2
+  nfailm: 2
+  depends: 
+    - 21/001
+  actions: COMMITTOR GROUP DISTANCE CENTER
+  modules: colvar generic vatom core
+  time: 24.22742076899999
+- id: '24.006'
+  title: Standard binding free energies from cylindrical restraints
+  shortitle: 'Standard bindin...'
+  path: lessons/24/006/data/NAVIGATION.html
+  instructors: Blake I Armstrong, Paolo Raiteri and Julian D Gale
+  doi: 10.1021/acs.jpcc.3c02864
+  reference: 'B. I. Armstrong, A. Silvestri, M. De La Pierre, P. Raiteri, J. D. Gale, Determining the Complete Stability of Calcite Kink Sites: Real vs Ideal. The Journal of Physical Chemistry C. 127, 13958–13968 (2023)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpcc.3c02864'
+  description: Calculating standard binding free energies with metadynamics, PLUMED and OpenMM
+  tags: metadynamics, surface binding, cylindrical restraint, standard state, volume correction, multiple-walkers
+  ninputs: 9
+  nfail: 1
+  nfailm: 1
+  depends: 
+    - 21/004
+  actions: METAD PRINT FIXEDATOM UPPER_WALLS BIASVALUE LOWER_WALLS FLUSH DISTANCE RESTART UNITS CUSTOM
+  modules: colvar generic setup vatom function bias
+  time: 124.93875342299998
+- id: '23.004'
+  title: Rewriting coordination CVs in CUDA
+  shortitle: 'Rewriting coord...'
+  path: lessons/23/004/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: How to implement a basic version of the coordination CV with CUDA
+  tags: developers, C++, parallelism, Cuda
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+  time: 0.16023193599994556
+- id: '23.002'
+  title: Introduction to the PLUMED parallel features for developers
+  shortitle: 'Introduction to...'
+  path: lessons/23/002/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: A simple presentation of some of the available features in PLUMED to simplify the interface with OpenMP and MPI. The lesson contains also a very simple example of how to implement a CV with CUDA.
+  tags: developers, C++, parallelism
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+  time: 0.16502571999990323
+- id: '22.015'
+  title: Mechanical pulling + FISST module
+  shortitle: 'Mechanical pull...'
+  path: lessons/22/015/data/NAVIGATION.html
+  instructors: Guillaume Stirnemann and Glen Hocky
+  doi: 10.1063/5.0009280
+  reference: 'M. J. Hartmann, Y. Singh, E. Vanden-Eijnden, G. M. Hocky, Infinite switch simulated tempering in force (FISST). The Journal of Chemical Physics. 152 (2020)'
+  ref_url: 'http://dx.doi.org/10.1063/5.0009280'
+  description: This tutorial explains how mechanical forces can be modeled using PLUMED and the FISST module
+  tags: masterclass-2022
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/001
+  actions: FISST PRINT MATHEVAL BIASVALUE RESTRAINT DISTANCE METAD DUMPATOMS UNITS
+  modules: colvar generic setup fisst function bias
+  time: 42.919988197000066
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  shortitle: 'SASA module - T...'
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  doi: 10.1021/acs.jpcb.2c00889
+  reference: 'A. Arsiccio, P. Ganguly, J.-E. Shea, A Transfer Free Energy Based Implicit Solvent Model for Protein Simulations in Solvent Mixtures: Urea-Induced Denaturation as a Case Study. The Journal of Physical Chemistry B. 126, 4472–4482 (2022)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpcb.2c00889'
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/001
+    - 21/004
+  actions: PRINT ALPHARMSD BIASVALUE ANTIBETARMSD PARABETARMSD LOWEST GYRATION MOLINFO LESS_THAN SUM SECONDARY_STRUCTURE_RMSD SASA_HASEL
+  modules: colvar generic secondarystructure function sasa bias
+  time: 23.61624180800004
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  shortitle: 'Rethinking Meta...'
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  doi: 10.1021/acs.jpclett.0c00497
+  reference: 'M. Invernizzi, M. Parrinello, Rethinking Metadynamics: From Bias Potentials to Probability Distributions. The Journal of Physical Chemistry Letters. 11, 2731–2736 (2020)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpclett.0c00497'
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  tags: masterclass-2022
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/003
+    - 21/004
+  actions: ECV_UMBRELLAS_LINE ENERGY OPES_EXPANDED TORSION OPES_METAD_EXPLORE OPES_METAD ECV_MULTITHERMAL
+  modules: colvar opes
+  time: 35.54118406999987
+- id: '21.006'
+  title: Dimensionality reduction
+  shortitle: 'Dimensionality ...'
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: 10.1063/1.2432340
+  reference: 'D. Branduardi, F. L. Gervasio, M. Parrinello, From A to B in free energy space. The Journal of Chemical Physics. 126 (2007)'
+  ref_url: 'http://dx.doi.org/10.1063/1.2432340'
+  description: An introduction to techniques such as dimensionality reduction, path collective variables, and indistinguishability that you may need to use in your own research projects.
+  tags: masterclass-2021
+  ninputs: 11
+  nfail: 6
+  nfailm: 1
+  depends: 
+    - 21/001
+  actions: GROUP HISTOGRAM CLASSICAL_MDS PCA FCCUBIC PATH TORSION DUMPPDB UNITS RMSD DUMPVECTOR DUMPMULTICOLVAR PARABETARMSD SKETCHMAP COMMITTOR PROJECT_POINTS ALPHARMSD COORDINATIONNUMBER ANTIBETARMSD COLLECT_FRAMES MOLINFO DUMPGRID PCAVARS PRINT LANDMARK_SELECT_FPS MORE_THAN
+  modules: colvar generic core gridtools setup secondarystructure dimred landmarks function symfunc multicolvar mapping
+  time: 61.45797993300016
+- id: '21.005'
+  title: Replica exchange methods
+  shortitle: 'Replica exchang...'
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/S0009-2614(99)01123-9
+  reference: 'Y. Sugita, Y. Okamoto, Replica-exchange molecular dynamics method for protein folding. Chemical Physics Letters. 314, 141–151 (1999)'
+  ref_url: 'http://dx.doi.org/10.1016/S0009-2614(99)01123-9'
+  description: Running umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/003
+    - 21/004
+  actions: PRINT RANDOM_EXCHANGES RESTRAINT TORSION MOLINFO METAD
+  modules: colvar generic bias
+  time: 19.157926061999888

@@ -1,0 +1,361 @@
+# file containing action database.
+- name: ALPHABETA
+  path: ALPHABETA.html
+  description: Calculate the alpha beta CV
+  module: multicolvar
+- name: ANN
+  path: ANN.html
+  description: Calculates the ANN-function.
+  module: annfunc
+- name: ARRANGE_POINTS
+  path: ARRANGE_POINTS.html
+  description: Arrange points in a low dimensional space so that the (transformed) distances between points in the low dimensional space match the dissimilarities provided in an input matrix.
+  module: dimred
+- name: BESSEL
+  path: BESSEL.html
+  description: Calculate the value of a Bessel function.
+  module: function
+- name: BF_COSINE
+  path: BF_COSINE.html
+  description: Fourier cosine basis functions.
+  module: ves
+- name: BF_GAUSSIANS
+  path: BF_GAUSSIANS.html
+  description: Gaussian basis functions.
+  module: ves
+- name: BF_WAVELETS
+  path: BF_WAVELETS.html
+  description: Daubechies Wavelets basis functions.
+  module: ves
+- name: BRIDGE_MATRIX
+  path: BRIDGE_MATRIX.html
+  description: Calculate the number of atoms that bridge two parts of a structure
+  module: adjmat
+- name: CENTER
+  path: CENTER.html
+  description: Calculate the center for a group of atoms, with arbitrary weights.
+  module: vatom
+- name: CLUSTER_DISTRIBUTION
+  path: CLUSTER_DISTRIBUTION.html
+  description: Calculate functions of the distribution of properties in your connected components.
+  module: clusters
+- name: CLUSTER_WITHSURFACE
+  path: CLUSTER_WITHSURFACE.html
+  description: Determine the atoms that are within a certain cutoff of the atoms in a cluster
+  module: clusters
+- name: COMBINE
+  path: COMBINE.html
+  description: Calculate a polynomial combination of a set of other variables.
+  module: function
+- name: CONTACTMAP
+  path: CONTACTMAP.html
+  description: Calculate the distances between a number of pairs of atoms and transform each distance by a switching function.
+  module: colvar
+- name: COORDINATIONNUMBER
+  path: COORDINATIONNUMBER.html
+  description: Calculate the coordination numbers of atoms so that you can then calculate functions of the distribution of
+  module: symfunc
+- name: COORD_ANGLES
+  path: COORD_ANGLES.html
+  description: Calculate all the angles between bonds in the first coordination spheres of a set of atoms
+  module: multicolvar
+- name: CUSTOM
+  path: CUSTOM.html
+  description: Calculate a combination of variables using a custom expression.
+  module: function
+- name: DETERMINANT
+  path: DETERMINANT.html
+  description: Calculate the determinant of a matrix
+  module: matrixtools
+- name: DIFFERENCE
+  path: DIFFERENCE.html
+  description: Calculate the differences between two scalars
+  module: refdist
+- name: DIPOLE
+  path: DIPOLE.html
+  description: Calculate the dipole moment for a group of atoms.
+  module: colvar
+- name: DISTANCES
+  path: DISTANCES.html
+  description: Calculate the distances between multiple piars of atoms
+  module: multicolvar
+- name: DOMAIN_DECOMPOSITION
+  path: DOMAIN_DECOMPOSITION.html
+  description: Pass domain decomposed properties of atoms to PLUMED
+  module: core
+- name: DUMPATOMS
+  path: DUMPATOMS.html
+  description: Dump selected atoms on a file.
+  module: generic
+- name: DUMPFORCES
+  path: DUMPFORCES.html
+  description: Dump the force acting on one of a values in a file.
+  module: generic
+- name: DUMPPDB
+  path: DUMPPDB.html
+  description: Output PDB file.
+  module: generic
+- name: ECV_LINEAR
+  path: ECV_LINEAR.html
+  description: Linear expansion, according to a parameter lambda.
+  module: opes
+- name: ECV_UMBRELLAS_LINE
+  path: ECV_UMBRELLAS_LINE.html
+  description: Target a multiumbrella ensemble, by combining systems each with a parabolic bias potential at a different location.
+  module: opes
+- name: EMMI
+  path: EMMI.html
+  description: Calculate the fit of a structure or ensemble of structures with a cryo-EM density map.
+  module: isdb
+- name: ENSEMBLE
+  path: ENSEMBLE.html
+  description: Calculates the replica averaging of a collective variable over multiple replicas.
+  module: function
+- name: EVALUATE_FUNCTION_FROM_GRID
+  path: EVALUATE_FUNCTION_FROM_GRID.html
+  description: Calculate the function stored on the input grid at an arbitrary point
+  module: gridtools
+- name: FAKE
+  path: FAKE.html
+  description: This is a fake colvar container used by cltools or various other actions that supports input and period definitions
+  module: colvar
+- name: FIND_CONTOUR
+  path: FIND_CONTOUR.html
+  description: Find an isocontour in a smooth function.
+  module: contour
+- name: FIND_SPHERICAL_CONTOUR
+  path: FIND_SPHERICAL_CONTOUR.html
+  description: Find an isocontour in a three dimensional grid by searching over a Fibonacci sphere.
+  module: contour
+- name: FLATTEN
+  path: FLATTEN.html
+  description: Convert a matrix into a vector
+  module: valtools
+- name: FUNCPATHGENERAL
+  path: FUNCPATHGENERAL.html
+  description: This function calculates path collective variables (PCVs) using an arbitrary combination of collective variables.
+  module: function
+- name: FUNNEL_PS
+  path: FUNNEL_PS.html
+  description: FUNNEL_PS implements the Funnel-Metadynamics (FM) technique in PLUMED 2.
+  module: funnel
+- name: GEOMETRIC_PATH
+  path: GEOMETRIC_PATH.html
+  description: Distance along and from a path calculated using geometric formulas
+  module: mapping
+- name: GPATH
+  path: GPATH.html
+  description: Distance along and from a path calculated using geometric formulas
+  module: mapping
+- name: GSYMFUNC_THREEBODY
+  path: GSYMFUNC_THREEBODY.html
+  description: Calculate functions of the coordinates of the coordinates of all pairs of bonds in the first coordination sphere of an atom
+  module: symfunc
+- name: HBPAMM_MATRIX
+  path: HBPAMM_MATRIX.html
+  description: Adjacency matrix in which two electronegative atoms are adjacent if they are hydrogen bonded
+  module: pamm
+- name: HEXACTIC_PARAMETER
+  path: HEXACTIC_PARAMETER.html
+  description: Calculate the hexatic order parameter
+  module: symfunc
+- name: INCYLINDER
+  path: INCYLINDER.html
+  description: This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell.
+  module: volumes
+- name: INTERPOLATE_GRID
+  path: INTERPOLATE_GRID.html
+  description: Interpolate a smooth function stored on a grid onto a grid with a smaller grid spacing.
+  module: gridtools
+- name: KERNEL
+  path: KERNEL.html
+  description: Use a switching function to determine how many of the input variables are less than a certain cutoff.
+  module: refdist
+- name: LANDMARK_SELECT_STRIDE
+  path: LANDMARK_SELECT_STRIDE.html
+  description: Select every ith frame from the stored data
+  module: landmarks
+- name: LOCAL_AVERAGE
+  path: LOCAL_AVERAGE.html
+  description: Calculate averages over spherical regions centered on atoms
+  module: symfunc
+- name: LOCAL_Q4
+  path: LOCAL_Q4.html
+  description: Calculate the local degree of order around an atoms by taking the average dot product between the q_4 vector on the central atom and the q_4 vector on the atoms in the first coordination sphere.
+  module: symfunc
+- name: LOWER_WALLS
+  path: LOWER_WALLS.html
+  description: Defines a wall for the value of one or more collective variables,
+  module: bias
+- name: MATHEVAL
+  path: MATHEVAL.html
+  description: An alias to the CUSTOM function that can also be used to calaculate combinations of variables using a custom expression.
+  module: function
+- name: MAXENT
+  path: MAXENT.html
+  description: Add a linear biasing potential on one or more variables that satisfies a maximum entropy principle.
+  module: bias
+- name: MAZE_RANDOM_ACCELERATION_MD
+  path: MAZE_RANDOM_ACCELERATION_MD.html
+  description: Performs random acceleration MD within the protein matrix.
+  module: maze
+- name: MEAN
+  path: MEAN.html
+  description: Calculate the arithmetic mean of the elements in a vector
+  module: function
+- name: METATENSOR
+  path: METATENSOR.html
+  description: Use arbitrary machine learning models as collective variables.
+  module: metatensor
+- name: MOMENTS
+  path: MOMENTS.html
+  description: Calculate the moments of the distribution of input quantities
+  module: function
+- name: MULTI_RMSD
+  path: MULTI_RMSD.html
+  description: Calculate RMSD distances for different domains and combine them.
+  module: colvar
+- name: ONES
+  path: ONES.html
+  description: Create a constant vector with all elements equal to one
+  module: generic
+- name: OPT_ADAM
+  path: OPT_ADAM.html
+  description: Adaptive moment estimation (ADAM) optimizer.
+  module: ves
+- name: OUTER_PRODUCT
+  path: OUTER_PRODUCT.html
+  description: Calculate the outer product matrix of two vectors
+  module: matrixtools
+- name: PAMM
+  path: PAMM.html
+  description: Probabilistic analysis of molecular motifs.
+  module: pamm
+- name: PBC
+  path: PBC.html
+  description: Pass the cell vectors into PLUMED.
+  module: core
+- name: PCAVARS
+  path: PCAVARS.html
+  description: Projection on principal component eigenvectors or other high dimensional linear subspace
+  module: mapping
+- name: PIV
+  path: PIV.html
+  description: Calculates the PIV-distance.
+  module: piv
+- name: POSITION
+  path: POSITION.html
+  description: Calculate the components of the position of an atom.
+  module: colvar
+- name: PRODUCT
+  path: PRODUCT.html
+  description: Calculate the product of the input quantities
+  module: function
+- name: PUCKERING
+  path: PUCKERING.html
+  description:  Calculate sugar pseudorotation coordinates.
+  module: colvar
+- name: Q3
+  path: Q3.html
+  description: Calculate 3rd order Steinhardt parameters.
+  module: symfunc
+- name: QUATERNION_BOND_PRODUCT_MATRIX
+  path: QUATERNION_BOND_PRODUCT_MATRIX.html
+  description: Calculate the product between a matrix of quaternions and the bonds
+  module: crystdistrib
+- name: RDF
+  path: RDF.html
+  description: Calculate the radial distribution function
+  module: gridtools
+- name: REPARAMETERIZE_PATH
+  path: REPARAMETERIZE_PATH.html
+  description: Take an input path with frames that are not equally spaced and make the frames equally spaced
+  module: mapping
+- name: RESTRAINT
+  path: RESTRAINT.html
+  description: Adds harmonic and/or linear restraints on one or more variables.
+  module: bias
+- name: RMSD
+  path: RMSD.html
+  description: Calculate the RMSD with respect to a reference structure.
+  module: colvar
+- name: SASA_HASEL
+  path: SASA_HASEL.html
+  description: Calculates the solvent accessible surface area (SASA) of a protein molecule, or other properties related to it.
+  module: sasa
+- name: SELECT
+  path: SELECT.html
+  description: Selects an argument based on the value of a SELECTOR.
+  module: isdb
+- name: SHADOW
+  path: SHADOW.html
+  description: Communicate atoms positions among replicas and calculate the RMSD with respect to a mother (reference) simulation.
+  module: isdb
+- name: SKETCHMAP
+  path: SKETCHMAP.html
+  description: Construct a sketch map projection of the input data
+  module: dimred
+- name: SPHERICAL_HARMONIC
+  path: SPHERICAL_HARMONIC.html
+  description: Calculate the values of all the spherical harmonic funtions for a particular value of l.
+  module: symfunc
+- name: SUM
+  path: SUM.html
+  description: Calculate the sum of the arguments
+  module: function
+- name: TD_EXPONENTIAL
+  path: TD_EXPONENTIAL.html
+  description: Exponential distribution (static).
+  module: ves
+- name: TD_GENERALIZED_NORMAL
+  path: TD_GENERALIZED_NORMAL.html
+  description: Target distribution given by a sum of generalized normal distributions (static).
+  module: ves
+- name: TD_MULTITHERMAL_MULTIBARIC
+  path: TD_MULTITHERMAL_MULTIBARIC.html
+  description: Multithermal-multibaric target distribution (dynamic).
+  module: ves
+- name: TD_VONMISES
+  path: TD_VONMISES.html
+  description: Target distribution given by a sum of Von Mises distributions (static).
+  module: ves
+- name: TETRAHEDRALPORE
+  path: TETRAHEDRALPORE.html
+  description: This quantity can be used to calculate functions of the distribution of collective variables for the atoms lie that lie in a box defined by the positions of four atoms at the corners of a tetrahedron.
+  module: volumes
+- name: TOPOLOGY_MATRIX
+  path: TOPOLOGY_MATRIX.html
+  description: Adjacency matrix in which two atoms are adjacent if they are connected topologically
+  module: adjmat
+- name: TRANSPOSE
+  path: TRANSPOSE.html
+  description: Calculate the transpose of a matrix
+  module: matrixtools
+- name: UWALLS
+  path: UWALLS.html
+  description: Add lower walls to a vector of quantities
+  module: multicolvar
+- name: VES_OUTPUT_FES
+  path: VES_OUTPUT_FES.html
+  description: Tool to output biases and free energy surfaces for VES biases from previously obtained coefficients.
+  module: ves
+- name: VSTACK
+  path: VSTACK.html
+  description: Create a matrix by stacking vectors together
+  module: valtools
+- name: WHOLEMOLECULES
+  path: WHOLEMOLECULES.html
+  description: This action is used to rebuild molecules that can become split by the periodic boundary conditions.
+  module: generic
+- name: XYTORSIONS
+  path: XYTORSIONS.html
+  description: Calculate the torsional angle around the x axis between an arbitrary vector and the positive y direction
+  module: multicolvar
+- name: YXTORSIONS
+  path: YXTORSIONS.html
+  description: Calculate the torsional angle around the y axis between an arbitrary vector and the positive x direction
+  module: multicolvar
+- name: ZXTORSIONS
+  path: ZXTORSIONS.html
+  description: Calculate the torsional angle around the z axis between an arbitrary vector and the positive x direction
+  module: multicolvar

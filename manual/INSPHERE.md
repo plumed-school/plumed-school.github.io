@@ -1,0 +1,52 @@
+# [Shortcut](shortcuts.md): INSPHERE
+
+| Description    | Usage |
+|:--------|:--------:|
+| This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell. | [![used in 1 tutorials](https://img.shields.io/badge/tutorials-1-green.svg)](https://www.plumed-tutorials.org/browse.html?search=INSPHERE)[![used in 1 eggs](https://img.shields.io/badge/nest-1-green.svg)](https://www.plumed-nest.org/browse.html?search=INSPHERE)|
+ | **output value** | **type** |
+| sum of values of input CVs in regin of interest | scalar |
+
+## Output components
+
+This action can calculate the [values](pecifying_arguments.html) in the following table when the associated keyword is included in the input for the action. These [values](pecifying_arguments.html) can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the [value](pecifying_arguments.html) required from the list below.
+
+| Name | Type | Keyword | Description |
+|:-------|:-----|:----:|:-------|
+| lessthan | scalar | LESS_THAN | the number of cvs in the region of interest that are less than a certain threshold | 
+| morethan | scalar | MORE_THAN | the number of cvs in the region of interest that are more than a certain threshold | 
+| between | scalar | BETWEEN | the number of cvs in the region of interest that are within a certain range | 
+| sum | scalar | SUM | the sum of all the colvars weighted by the function that determines if we are in the region | 
+| mean | scalar | MEAN | the average values of the colvar in the region of interest | 
+
+
+## Input
+
+The [atoms](specifying_atoms.html) that serve as the input for this action are specified using one or more of the keywords in the following table.
+
+| Keyword |  Type | Description |
+|:--------|:------:|:-----------|
+| ATOMS | atoms | the group of atoms that you would like to investigate |
+| CENTER | atoms | the atom whose vicinity we are interested in examining |
+| ATOM | atoms | the atom whose vicinity we are interested in examining |
+
+
+## Further details and examples 
+Information for the manual from the code would go in here 
+## Syntax 
+The following table describes the [keywords and options](parsing.md) that can be used with this action 
+
+| Keyword | Type | Default | Description |
+|:-------|:----:|:-------:|:-----------|
+| ATOMS | input | none | the group of atoms that you would like to investigate |
+| CENTER | input | none | the atom whose vicinity we are interested in examining |
+| ATOM | input | none | the atom whose vicinity we are interested in examining |
+| KERNEL | compulsory | gaussian |  the type of kernel function to be used |
+| RADIUS | compulsory | none | the switching function that tells us the extent of the sphereical region of interest |
+| SERIAL | optional | false |  do the calculation in serial |
+| OUTSIDE | optional | false |  calculate quantities for colvars that are on atoms outside the region of interest |
+| DATA | optional | not used | the label of an action that calculates multicolvars |
+| LESS_THAN | optional | not used | calcualte the number of colvars that are inside the region of interest and that are less than a certain threshold |
+| MORE_THAN | optional | not used | calcualte the number of colvars that are inside the region of interest and that are greater that a certain threshold |
+| BETWEEN | optional | not used | calculate the number of colvars that are inside the region of interest and that have a CV value that is between a particular set of bounds |
+| SUM | optional | false |  calculate the sum of all the quantities |
+| MEAN | optional | false |  calculate the average value of the colvar inside the region of interest |

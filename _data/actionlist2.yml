@@ -1,0 +1,361 @@
+# file containing action database.
+- name: ADAPTIVE_PATH
+  path: ADAPTIVE_PATH.html
+  description: Compute path collective variables that adapt to the lowest free energy path connecting states A and B.
+  module: mapping
+- name: ANGLES
+  path: ANGLES.html
+  description: Calculate an angle.
+  module: multicolvar
+- name: AROUND
+  path: AROUND.html
+  description: This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell.
+  module: volumes
+- name: AVERAGE_PATH_DISPLACEMENT
+  path: AVERAGE_PATH_DISPLACEMENT.html
+  description: Accumulate the distances between the reference frames in the paths and the configurations visited
+  module: mapping
+- name: BF_COMBINED
+  path: BF_COMBINED.html
+  description: Combining other basis functions types
+  module: ves
+- name: BF_FOURIER
+  path: BF_FOURIER.html
+  description: Fourier basis functions.
+  module: ves
+- name: BF_SINE
+  path: BF_SINE.html
+  description: Fourier sine basis functions.
+  module: ves
+- name: BRIDGE
+  path: BRIDGE.html
+  description: Calculate a matrix with elements equal to one if there is a bridging atom between the two atoms
+  module: adjmat
+- name: CELL
+  path: CELL.html
+  description: Calculate the components of the simulation cell
+  module: colvar
+- name: CLUSTER_DIAMETER
+  path: CLUSTER_DIAMETER.html
+  description: Print out the diameter of one of the connected components
+  module: clusters
+- name: CLUSTER_WEIGHTS
+  path: CLUSTER_WEIGHTS.html
+  description: Setup a vector that has one for all the atoms that form part of the cluster of interest and that has zero for all other atoms.
+  module: clusters
+- name: COM
+  path: COM.html
+  description: Calculate the center of mass for a group of atoms.
+  module: vatom
+- name: CONSTANT
+  path: CONSTANT.html
+  description: Create a constant value that can be passed to actions
+  module: generic
+- name: COORDINATION
+  path: COORDINATION.html
+  description: Calculate coordination numbers.
+  module: colvar
+- name: COORDINATION_SHELL_FUNCTION
+  path: COORDINATION_SHELL_FUNCTION.html
+  description: Calculate an arbitrary function of all the bond vectors in the first coordination sphere of an atom
+  module: symfunc
+- name: CS2BACKBONE
+  path: CS2BACKBONE.html
+  description: Calculates the backbone chemical shifts for a protein.
+  module: isdb
+- name: DENSITY
+  path: DENSITY.html
+  description: Depreciated command that is bascially equivalant to GROUP.
+  module: volumes
+- name: DIAGONALIZE
+  path: DIAGONALIZE.html
+  description: Calculate the eigenvalues and eigenvectors of a square matrix
+  module: matrixtools
+- name: DIMER
+  path: DIMER.html
+  description: This CV computes the dimer interaction energy for a collection of dimers.
+  module: colvar
+- name: DISTANCE
+  path: DISTANCE.html
+  description: Calculate the distance between a pair of atoms.
+  module: colvar
+- name: DISTANCE_MATRIX
+  path: DISTANCE_MATRIX.html
+  description: Calculate a matrix of distances
+  module: adjmat
+- name: DRR
+  path: DRR.html
+  description: Used to performed extended-system adaptive biasing force(eABF)
+  module: drr
+- name: DUMPDERIVATIVES
+  path: DUMPDERIVATIVES.html
+  description: Dump the derivatives with respect to the input parameters for one or more objects (generally CVs, functions or biases).
+  module: generic
+- name: DUMPMULTICOLVAR
+  path: DUMPMULTICOLVAR.html
+  description: Basically equivalent to DUMPATOMS
+  module: multicolvar
+- name: ECV_CUSTOM
+  path: ECV_CUSTOM.html
+  description: Use some given CVs as a set of expansion collective variables (ECVs).
+  module: opes
+- name: ECV_UMBRELLAS_FILE
+  path: ECV_UMBRELLAS_FILE.html
+  description: Target a multiumbrella ensemble, by combining systems each with a parabolic bias potential at a different location.
+  module: opes
+- name: EFFECTIVE_ENERGY_DRIFT
+  path: EFFECTIVE_ENERGY_DRIFT.html
+  description: Print the effective energy drift
+  module: generic
+- name: ENERGY
+  path: ENERGY.html
+  description: Calculate the total potential energy of the simulation box.
+  module: colvar
+- name: EUCLIDEAN_DISTANCE
+  path: EUCLIDEAN_DISTANCE.html
+  description: Calculate the euclidean distance between two vectors of arguments
+  module: refdist
+- name: EXTRACV
+  path: EXTRACV.html
+  description: Allow PLUMED to use collective variables computed in the MD engine.
+  module: colvar
+- name: FCCUBIC_FUNC
+  path: FCCUBIC_FUNC.html
+  description: Measure how similar the environment around atoms is to that found in a FCC structure.
+  module: symfunc
+- name: FIND_GRID_MINIMUM
+  path: FIND_GRID_MINIMUM.html
+  description: Find the point with the lowest value of the function on the grid
+  module: gridtools
+- name: FIXEDATOM
+  path: FIXEDATOM.html
+  description: Add a virtual atom in a fixed position.
+  module: vatom
+- name: FRET
+  path: FRET.html
+  description: Calculates the FRET efficiency between a pair of atoms.
+  module: isdb
+- name: FUNNEL
+  path: FUNNEL.html
+  description: Calculate a funnel-shape restraint potential that is defined on a grid that is read during the setup.
+  module: funnel
+- name: GATHER_REPLICAS
+  path: GATHER_REPLICAS.html
+  description: Create a vector that contains the copies of the input quantities from all replicas
+  module: generic
+- name: GHOST
+  path: GHOST.html
+  description: Calculate the absolute position of a ghost atom with fixed coordinates in the local reference frame formed by three atoms.
+  module: vatom
+- name: GROUP
+  path: GROUP.html
+  description: Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms.
+  module: core
+- name: HBOND_MATRIX
+  path: HBOND_MATRIX.html
+  description: Adjacency matrix in which two atoms are adjacent if there is a hydrogen bond between them.
+  module: adjmat
+- name: HBPAMM_SH
+  path: HBPAMM_SH.html
+  description: Calculate the number of hydrogen bonds each hydrogen participates in using the HBPamm method
+  module: pamm
+- name: INCLUDE
+  path: INCLUDE.html
+  description: Includes an external input file, similar to #include in C preprocessor.
+  module: generic
+- name: INSPHERE
+  path: INSPHERE.html
+  description: This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell.
+  module: volumes
+- name: KDE
+  path: KDE.html
+  description: Create a histogram from the input scalar/vector/matrix using KDE
+  module: gridtools
+- name: LANDMARK_SELECT_RANDOM
+  path: LANDMARK_SELECT_RANDOM.html
+  description: Select a random set of landmarks from a large set of configurations.
+  module: landmarks
+- name: LOCALENSEMBLE
+  path: LOCALENSEMBLE.html
+  description: Calculates the average over multiple arguments.
+  module: function
+- name: LOCAL_Q3
+  path: LOCAL_Q3.html
+  description: Calculate the local degree of order around an atoms by taking the average dot product between the q_3 vector on the central atom and the q_3 vector on the atoms in the first coordination sphere.
+  module: symfunc
+- name: LOGSUMEXP
+  path: LOGSUMEXP.html
+  description: This action takes the exponential of a vector of logarithms and divides each element of the vector by the sum of the exponentials.
+  module: landmarks
+- name: MASS
+  path: MASS.html
+  description: Get the mass of one or multiple atoms
+  module: colvar
+- name: MATRIX_VECTOR_PRODUCT
+  path: MATRIX_VECTOR_PRODUCT.html
+  description: Calculate the product of the matrix and the vector
+  module: matrixtools
+- name: MAZE_OPTIMIZER_BIAS
+  path: MAZE_OPTIMIZER_BIAS.html
+  description: Biases the ligand along the direction calculated by the chosen MAZE_OPTIMIZER.
+  module: maze
+- name: MAZE_STEERED_MD
+  path: MAZE_STEERED_MD.html
+  description: Performs a linear unbinding along a predefined biasing direction that
+  module: maze
+- name: METAINFERENCE
+  path: METAINFERENCE.html
+  description: Calculates the Metainference energy for a set of experimental data.
+  module: isdb
+- name: MOLINFO
+  path: MOLINFO.html
+  description: This command is used to provide information on the molecules that are present in your system.
+  module: generic
+- name: MULTICOLVARDENS
+  path: MULTICOLVARDENS.html
+  description: Evaluate the average value of a multicolvar on a grid.
+  module: gridtools
+- name: NORMALIZED_EUCLIDEAN_DISTANCE
+  path: NORMALIZED_EUCLIDEAN_DISTANCE.html
+  description: Calculate the normalised euclidean distance between two points in CV space
+  module: refdist
+- name: OPES_METAD_EXPLORE
+  path: OPES_METAD_EXPLORE.html
+  description: On-the-fly probability enhanced sampling with well-tempered target distribution in exploreation mode.
+  module: opes
+- name: OPT_ROBBINS_MONRO_SGD
+  path: OPT_ROBBINS_MONRO_SGD.html
+  description: Robbins-Monro stochastic gradient decent.
+  module: ves
+- name: PAIRENTROPY
+  path: PAIRENTROPY.html
+  description: Calculate the KL Entropy from the radial distribution function
+  module: gridtools
+- name: PATHMSD
+  path: PATHMSD.html
+  description: This Colvar calculates path collective variables.
+  module: colvar
+- name: PCARMSD
+  path: PCARMSD.html
+  description: Calculate the PCA components for a number of provided eigenvectors and an average structure.
+  module: colvar
+- name: PIECEWISE
+  path: PIECEWISE.html
+  description: Compute a piece wise straight line through its arguments that passes through a set of ordered control points.
+  module: function
+- name: PLUMED
+  path: PLUMED.html
+  description: Embed a separate PLUMED instance.
+  module: generic
+- name: PRINT_NDX
+  path: PRINT_NDX.html
+  description: Print an ndx file
+  module: generic
+- name: PROPERTYMAP
+  path: PROPERTYMAP.html
+  description: Calculate generic property maps.
+  module: colvar
+- name: Q1
+  path: Q1.html
+  description: Calculate 1st order Steinhardt parameters
+  module: symfunc
+- name: QUATERNION
+  path: QUATERNION.html
+  description: Calculate quaternions for molecules.
+  module: crystdistrib
+- name: RDC
+  path: RDC.html
+  description: Calculates the (Residual) Dipolar Coupling between two atoms.
+  module: isdb
+- name: REFERENCE_GRID
+  path: REFERENCE_GRID.html
+  description: Setup a constant grid by either reading values from a file or definining a function in input
+  module: gridtools
+- name: RESTART
+  path: RESTART.html
+  description: Activate restart.
+  module: setup
+- name: REWEIGHT_TEMP_PRESS
+  path: REWEIGHT_TEMP_PRESS.html
+  description: Calculate weights for ensemble averages at temperatures and/or pressures different than those used in your original simulation.
+  module: bias
+- name: SANS
+  path: SANS.html
+  description: Calculates SANS intensity.
+  module: isdb
+- name: SECONDARY_STRUCTURE_RMSD
+  path: SECONDARY_STRUCTURE_RMSD.html
+  description: Calclulate the distance between segments of a protein and a reference structure of interest
+  module: secondarystructure
+- name: SELECT_WITH_MASK
+  path: SELECT_WITH_MASK.html
+  description: Use a mask to select elements of an array
+  module: valtools
+- name: SIZESHAPE_POSITION_MAHA_DIST
+  path: SIZESHAPE_POSITION_MAHA_DIST.html
+  description: Calculates Mahalanobis distance of a current configuration from a  given reference configurational distribution in size-and-shape space.
+  module: sizeshape
+- name: SORT
+  path: SORT.html
+  description: This function can be used to sort colvars according to their magnitudes.
+  module: function
+- name: STATS
+  path: STATS.html
+  description: Calculates statistical properties of a set of collective variables with respect to a set of reference values.
+  module: function
+- name: TD_CUSTOM
+  path: TD_CUSTOM.html
+  description: Target distribution given by an arbitrary mathematical expression (static or dynamic).
+  module: ves
+- name: TD_GENERALIZED_EXTREME_VALUE
+  path: TD_GENERALIZED_EXTREME_VALUE.html
+  description: Generalized extreme value distribution (static).
+  module: ves
+- name: TD_MULTICANONICAL
+  path: TD_MULTICANONICAL.html
+  description: Multicanonical target distribution (dynamic).
+  module: ves
+- name: TD_UNIFORM
+  path: TD_UNIFORM.html
+  description: Uniform target distribution (static).
+  module: ves
+- name: TETRAHEDRAL
+  path: TETRAHEDRAL.html
+  description: Calculate the degree to which the environment about ions has a tetrahedral order.
+  module: symfunc
+- name: TIME
+  path: TIME.html
+  description: retrieve the time of the simulation to be used elsewhere
+  module: generic
+- name: TORSIONS_MATRIX
+  path: TORSIONS_MATRIX.html
+  description: Calculate the matrix of torsions between two vectors of molecules
+  module: adjmat
+- name: UPPER_WALLS
+  path: UPPER_WALLS.html
+  description: Defines a wall for the value of one or more collective variables,
+  module: bias
+- name: VES_OUTPUT_BASISFUNCTIONS
+  path: VES_OUTPUT_BASISFUNCTIONS.html
+  description: Output basis functions to file.
+  module: ves
+- name: VORONOI
+  path: VORONOI.html
+  description: Do a voronoi analysis
+  module: matrixtools
+- name: WHAM_WEIGHTS
+  path: WHAM_WEIGHTS.html
+  description: Calculate and output weights for configurations using the weighted histogram analysis method.
+  module: wham
+- name: XDISTANCES
+  path: XDISTANCES.html
+  description: Calculate the x components of the vectors connecting one or many pairs of atoms.
+  module: multicolvar
+- name: YDISTANCES
+  path: YDISTANCES.html
+  description: Calculate the y components of the vectors connecting one or many pairs of atoms.
+  module: multicolvar
+- name: ZDISTANCES
+  path: ZDISTANCES.html
+  description: Calculate the z components of the vectors connecting one or many pairs of atoms.
+  module: multicolvar
