@@ -1,0 +1,209 @@
+# file containing lesson database.
+- id: '25.003'
+  title: Defining custom machine learning CV with metatomic
+  shortitle: Defining custom...
+  path: lessons/25/003/data/NAVIGATION.html
+  instructors: Guillaume Fraux, Rohit Goswami and Michele Ceriotti
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: An introduction to the use of interface between plumed and the metatomic library
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.10: 1
+    master: 1
+  depends:
+  - '21.001'
+  - '21.004'
+  actions: SELECT_COMPONENTS METATOMIC METAD
+  modules: metatomic bias valtools
+  time: 5.561331894000006
+- id: '24.016'
+  title: Host-Guest binding free energies using an automated OneOPES protocol
+  shortitle: Host-Guest bind...
+  path: lessons/24/016/data/NAVIGATION.html
+  instructors: Pedro Febrer Martinez, Valerio Rizzi, Simone Aureli, Francesco Luigi Gervasio
+  doi: 10.1101/2024.08.23.609378
+  reference: "P. Febrer Martinez, V. Rizzi, S. Aureli, F. L. Gervasio, Host-Guest binding free energies \xE0 la carte: an automated OneOPES protocol. doi: 10.1101/2024.08.23.609378 (2024)"
+  ref_url: http://dx.doi.org/10.1101/2024.08.23.609378
+  description: A tutorial on an automated OneOPES protocol for calculating host-guest binding free energies
+  tags: OneOPES, ligand binding, binding free energy, SAMPL challenge, host-guest
+  ninputs: 12
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  actions: LOWER_WALLS ECV_MULTITHERMAL FIXEDATOM DISTANCE ENERGY MATHEVAL ANGLE OPES_METAD_EXPLORE OPES_EXPANDED CENTER FIT_TO_TEMPLATE COORDINATION PRINT GROUP WHOLEMOLECULES UPPER_WALLS
+  modules: generic bias function core colvar vatom opes
+  time: 65.74449059499997
+- id: '24.015'
+  title: How to use the PLUMED PyCV plugin
+  shortitle: How to use the ...
+  path: lessons/24/015/data/NAVIGATION.html
+  instructors: Daniele Rapetti, Toni Giorgino
+  doi: 10.21105/joss.01773
+  reference: 'T. Giorgino, PYCV: a PLUMED 2 Module Enabling the Rapid Prototyping of Collective Variables in Python. Journal of Open Source Software 4, 1773 (2019)'
+  ref_url: http://dx.doi.org/10.21105/joss.01773
+  description: An introduction to the pycv module.  This module provides you with an action that allows you to call python from PLUMED.
+  tags: manual, python
+  ninputs: 7
+  nfail: 7
+  nfailm: 7
+  inputfails:
+    v2.10: 7
+    master: 7
+  actions: LOAD DISTANCE PRINT
+  modules: generic colvar setup
+  time: 31.21496182300001
+- id: '24.011'
+  title: Parameterization of Path CVs for drug-target binding
+  shortitle: Parameterizatio...
+  path: lessons/24/011/data/NAVIGATION.html
+  instructors: Mattia Bernetti and Matteo Masetti
+  doi: 10.1021/acs.jctc.9b00450
+  reference: "M. Bernetti, M. Masetti, M. Recanatini, R. E. Amaro, A. Cavalli, An Integrated Markov State Model and Path Metadynamics Approach To Characterize Drug Binding Processes. Journal of Chemical Theory and Computation 15, 5689\u20135702 (2019)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.9b00450
+  description: Using path CVs to study drug target binding with metadynamics
+  tags: drug-target binding, Path CVs, metadynamics
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: LOWER_WALLS DISTANCE PATHMSD CENTER MOVINGRESTRAINT PRINT MOLINFO WHOLEMOLECULES METAD UPPER_WALLS
+  modules: generic colvar vatom bias
+  time: 34.579842428999996
+- id: '24.004'
+  title: Volume-based Metadynamics
+  shortitle: Volume-based Me...
+  path: lessons/24/004/data/NAVIGATION.html
+  instructors: Riccardo Capelli
+  doi: 10.1021/acs.jpclett.9b01183
+  reference: "R. Capelli, P. Carloni, M. Parrinello, Exhaustive Search of Ligand Binding Pathways via Volume-Based Metadynamics. The Journal of Physical Chemistry Letters 10, 3495\u20133499 (2019)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpclett.9b01183
+  description: This tutorial teaches you how to run free energy calculations to investigate protein-ligand binding
+  tags: Metadynamics, protein-ligand binding, free energy calculations
+  ninputs: 17
+  nfail: 3
+  nfailm: 3
+  inputfails:
+    v2.10: 3
+    master: 3
+  depends:
+  - 21/001
+  - 21/004
+  actions: HISTOGRAM RESTRAINT POSITION CONVERT_TO_FES FIT_TO_TEMPLATE DUMPGRID WRAPAROUND PRINT GROUP METAD MATHEVAL COM FLUSH RMSD COORDINATION UPPER_WALLS REWEIGHT_BIAS WHOLEMOLECULES READ
+  modules: generic bias function gridtools core colvar vatom
+  time: 89.41662084700005
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  shortitle: SASA module - T...
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  doi: 10.1021/acs.jpcb.2c00889
+  reference: "A. Arsiccio, P. Ganguly, J.-E. Shea, A Transfer Free Energy Based Implicit Solvent Model for Protein Simulations in Solvent Mixtures: Urea-Induced Denaturation as a Case Study. The Journal of Physical Chemistry B 126, 4472\u20134482 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcb.2c00889
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: SECONDARY_STRUCTURE_DRMSD PARABETARMSD ANTIBETARMSD CUSTOM BIASVALUE DISTANCE ALPHARMSD SUM LESS_THAN GYRATION SASA_HASEL PRINT MOLINFO LOWEST
+  modules: generic bias secondarystructure sasa function colvar
+  time: 23.762337136999975
+- id: '22.009'
+  title: Using path collective variables to find reaction mechanisms in complex free energy landscapes
+  shortitle: Using path coll...
+  path: lessons/22/009/data/NAVIGATION.html
+  instructors: Bernd Ensing
+  doi: 10.1103/PhysRevLett.109.020601
+  reference: "G. D\xEDaz Leines, B. Ensing, Path Finding on High-Dimensional Free Energy Landscapes. Physical Review Letters 109 (2012)"
+  ref_url: http://dx.doi.org/10.1103/PhysRevLett.109.020601
+  description: An introduction to using path collective variables for describing and simulating activated molecular processes
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.10: 1
+    master: 1
+  depends:
+  - 21/001
+  actions: LOWER_WALLS DISTANCE PRINT UNITS METAD UPPER_WALLS
+  modules: generic colvar bias setup
+  time: 9.475916590999987
+- id: '22.002'
+  title: Analysis of PLUMED output by Metadynminer
+  shortitle: Analysis of PLU...
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  doi: 10.32614/RJ-2022-057
+  reference: "D. Trapl, V. Spiwok, Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d. The R Journal 14, 46\u201358 (2022)"
+  ref_url: http://dx.doi.org/10.32614/RJ-2022-057
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulations
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 3.909076705000018
+- id: '22.001'
+  title: Funnel Metadynamics
+  shortitle: Funnel Metadyna...
+  path: lessons/22/001/data/NAVIGATION.html
+  instructors: Stefano Raniolo and Vittorio Limongelli
+  doi: 10.1038/s41596-020-0342-4
+  reference: "S. Raniolo, V. Limongelli, Ligand binding free-energy calculations with funnel metadynamics. Nature Protocols 15, 2837\u20132866 (2020)"
+  ref_url: http://dx.doi.org/10.1038/s41596-020-0342-4
+  description: An introduction to modelling ligand binding using funnel metadynamics
+  tags: masterclass-2022 Funnel Metadynamics ligand/target binding
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 14.61312645800001
+- id: '21.006'
+  title: Dimensionality reduction
+  shortitle: Dimensionality ...
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: 10.1063/1.2432340
+  reference: D. Branduardi, F. L. Gervasio, M. Parrinello, From A to B in free energy space. The Journal of Chemical Physics 126 (2007)
+  ref_url: http://dx.doi.org/10.1063/1.2432340
+  description: An introduction to techniques such as dimensionality reduction, path collective variables, and indistinguishability that you may need to use in your own research projects.
+  tags: masterclass-2021
+  ninputs: 11
+  nfail: 0
+  nfailm: 1
+  inputfails:
+    v2.10: 0
+    master: 1
+  depends:
+  - 21/001
+  actions: HISTOGRAM DUMPPDB DUMPVECTOR TORSION DUMPGRID UNITS DUMPMULTICOLVAR MORE_THAN SKETCHMAP PATH PRINT FCCUBIC GROUP COMMITTOR CLASSICAL_MDS PARABETARMSD ANTIBETARMSD PCA ALPHARMSD MOLINFO COLLECT_FRAMES LANDMARK_SELECT_FPS RMSD PROJECT_POINTS COORDINATIONNUMBER
+    PCAVARS
+  modules: generic core secondarystructure landmarks setup mapping function gridtools multicolvar symfunc colvar dimred
+  time: 69.32220005500005

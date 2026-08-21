@@ -1,0 +1,85 @@
+# file containing lesson database.
+- id: '24.009'
+  title: Multiple Walkers Metadynamics Simulations with a Reactive Machine Learning Interatomic Potential
+  shortitle: Multiple Walker...
+  path: lessons/24/009/data/NAVIGATION.html
+  instructors: Kam-Tung Chan and Davide Donadio
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Running metadynamics with a reactive, machine-learning interaction potential
+  tags: metadynamics, nitrate anion, machine learning interatomic potential
+  ninputs: 3
+  nfail: 1
+  nfailm: 3
+  inputfails:
+    v2.10: 1
+    master: 3
+  depends:
+  - 21/001
+  - 21/002
+  - 21/004
+  actions: CUSTOM UNITS HBOND_MATRIX HISTOGRAM COORDINATION DUMPGRID ANGLE METAD UPPER_WALLS PRINT FLUSH REWEIGHT_METAD READ DISTANCE GROUP
+  modules: colvar setup function bias gridtools adjmat core generic
+  time: 21.029205346000012
+- id: '23.001'
+  title: Developments in PLUMED
+  shortitle: Developments in...
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  ninputs: 89
+  nfail: 1
+  nfailm: 0
+  inputfails:
+    v2.10: 1
+    master: 0
+  actions: CLUSTER_WEIGHTS GEOMETRIC_PATH COMBINE LOCAL_AVERAGE COM INTERPOLATE_GRID LOWEST CENTER RMSD_VECTOR SPHERICAL_HARMONIC LOCAL_Q1 DFSCLUSTERING GSYMFUNC_THREEBODY REFERENCE_GRID DISTANCES Q4 GROUP CONCATENATE INTEGRATE_GRID PATH RDF GATHER_REPLICAS
+    PCAVARS INSPHERE CONSTANT MATRIX_VECTOR_PRODUCT FIXEDATOM BIASVALUE TORSION LESS_THAN Q6 ONES GPATH WHOLEMOLECULES SUM DISTANCE PRINT RMSD RESTRAINT KDE CLUSTER_PROPERTIES PAIRENTROPY DOMAIN_DECOMPOSITION DIAGONALIZE CONTACT_MATRIX COORDINATIONNUMBER DUMPGRID
+    MATRIX_PRODUCT TRANSPOSE VOLUME DISPLACEMENT Q1 SORT DISTANCE_MATRIX CUSTOM PDB2CONSTANT ACCUMULATE MORE_THAN SELECT_COMPONENTS HISTOGRAM VSTACK OUTER_PRODUCT GET_VOLUME_ELEMENT DIFFERENCE EUCLIDEAN_DISTANCE POSITION MEAN AVERAGE SPRINT
+  modules: multicolvar matrixtools colvar vatom sprint refdist clusters symfunc mapping function volumes valtools bias gridtools core generic adjmat
+  time: 443.109935821
+- id: '22.007'
+  title: Learning and enhancing fluctuations along information bottleneck for automated enhanced sampling
+  shortitle: Learning and en...
+  path: lessons/22/007/data/NAVIGATION.html
+  instructors: Pratyush Tiwary
+  doi: 10.1021/acs.jctc.2c00058
+  reference: "S. Mehdi, D. Wang, S. Pant, P. Tiwary, Accelerating All-Atom Simulations and Gaining Mechanistic Understanding of Biophysical Systems through State Predictive Information Bottleneck. Journal of Chemical Theory and Computation 18, 3231\u20133238\
+    \ (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.2c00058
+  description: An introduction to the state predictive information bottleneck (SPIB) deep-learning-based framework for learning reaction coordinates from high dimensional molecular simulation trajectories.
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 8.196435589999965
+- id: '22.006'
+  title: EDS module and Coarse-Grained directed simulations
+  shortitle: EDS module and ...
+  path: lessons/22/006/data/NAVIGATION.html
+  instructors: Glen Hocky and Andrew White
+  doi: 10.1021/ct500320c
+  reference: "A. D. White, G. A. Voth, Efficient and Minimal Method to Bias Molecular Simulations with Experimental Data. Journal of Chemical Theory and Computation 10, 3023\u20133030 (2014)"
+  ref_url: http://dx.doi.org/10.1021/ct500320c
+  description: This tutorials describes how to bias simulations to agree with experimental data using experiment directed simulation.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: MOLINFO EDS MATHEVAL TORSION BIASVALUE DISTANCE PRINT
+  modules: colvar eds bias function generic
+  time: 23.992295939000087

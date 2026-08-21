@@ -1,0 +1,328 @@
+# file containing lesson database.
+- id: '25.002'
+  title: Refining AlphaFold models for virtual screening
+  shortitle: Refining AlphaF...
+  path: lessons/25/002/data/NAVIGATION.html
+  instructors: Samiran Sen
+  doi: 10.1101/2025.06.25.661454
+  reference: 'S. Sen, S. E. Hoff, T. I. Morozova, V. Schnapka, M. Bonomi, Advancing in silico drug design with Bayesian refinement of AlphaFold models. doi: 10.1101/2025.06.25.661454 (2025)'
+  ref_url: http://dx.doi.org/10.1101/2025.06.25.661454
+  description: A tutorial to use bAIes to refine AlphaFold models for small-molecule virtual screening
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: BAIES GROUP PRINT BIASVALUE
+  modules: core bias generic isdb
+  time: 20.471743263999997
+- id: '24.021'
+  title: Setting Up and Analyzing Bias-Exchange Metadynamics Simulations
+  shortitle: Setting Up and ...
+  path: lessons/24/021/data/NAVIGATION.html
+  instructors: Fabrizio Marinelli and Vanessa Ariadna Leone Alvarez
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: This tutorial offers a comprehensive protocol, complemented by practical examples, for setting up and performing free energy analysis of bias-exchange metadynamics simulations of cis-trans isomerization in a proline-containing peptide.
+  tags: molecular dynamics, metadynamics, bias exchange metadynamics, weighted histogram analysis method, mean forces, cis-trans isomerization, peptidyl-prolyl peptide
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: METAD PRINT RANDOM_EXCHANGES DUMPFORCES TORSION INCLUDE
+  modules: colvar bias generic
+  time: 23.981419699
+- id: '24.017'
+  title: Enhanced sampling for magnesium-RNA binding dynamics
+  shortitle: Enhanced sampli...
+  path: lessons/24/017/data/NAVIGATION.html
+  instructors: Olivier Languin Cattoen
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: This tutorial will teach you how to use PLUMED, GROMACS and Python notebooks to implement an enhanced sampling strategy for magnesium-RNA binding dynamics.
+  tags: CASP, RNA, Magnesium
+  ninputs: 2
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: DISTANCES METAD PRINT GROUP CUSTOM BIASVALUE COORDINATION LOWER_WALLS UPPER_WALLS
+  modules: colvar multicolvar function bias generic core
+  time: 17.830290898000015
+- id: '24.013'
+  title: Permutationally Invariant Networks for Enhanced Sampling (PINES)
+  shortitle: Permutationally...
+  path: lessons/24/013/data/NAVIGATION.html
+  instructors: Nicholas S.M. Herringer, Aniruddha Seal, Armin Shayesteh Zadeh, Siva Dasetty, Andrew L. Ferguson
+  doi: 10.1021/acs.jctc.3c00923
+  reference: "N. S. M. Herringer, S. Dasetty, D. Gandhi, J. Lee, A. L. Ferguson, Permutationally Invariant Networks for Enhanced Sampling (PINES): Discovery of Multimolecular and Solvent-Inclusive Collective Variables. Journal of Chemical Theory and Computation\
+    \ 20, 178\u2013198 (2023)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.3c00923
+  description: An introduction to using permutationally invariant networks for enhanced sampling
+  tags: Metadynamics, Permutationally invariant vectors, machine learning collective variable, parallel bias metadynamics
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 5.534029292000014
+- id: '24.008'
+  title: Using the maze module
+  shortitle: Using the maze ...
+  path: lessons/24/008/data/NAVIGATION.html
+  instructors: Jakub Rydzewski
+  doi: 10.1063/1.5108638
+  reference: J. Rydzewski, O. Valsson, Finding multiple reaction pathways of ligand unbinding. The Journal of Chemical Physics 150 (2019)
+  ref_url: http://dx.doi.org/10.1063/1.5108638
+  description: Sampling ligand-protein dissociation using the maze module
+  tags: protein, ligand, dissociation, unbinding, maze
+  ninputs: 4
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.10: 2
+    master: 2
+  depends:
+  - 21/001
+  actions: GROUP CENTER COMMITTOR DISTANCE
+  modules: colvar generic vatom core
+  time: 29.56561773499999
+- id: '24.006'
+  title: Standard binding free energies from cylindrical restraints
+  shortitle: Standard bindin...
+  path: lessons/24/006/data/NAVIGATION.html
+  instructors: Blake I Armstrong, Paolo Raiteri and Julian D Gale
+  doi: 10.1021/acs.jpcc.3c02864
+  reference: "B. I. Armstrong, A. Silvestri, M. De La Pierre, P. Raiteri, J. D. Gale, Determining the Complete Stability of Calcite Kink Sites: Real vs Ideal. The Journal of Physical Chemistry C 127, 13958\u201313968 (2023)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcc.3c02864
+  description: Calculating standard binding free energies with metadynamics, PLUMED and OpenMM
+  tags: metadynamics, surface binding, cylindrical restraint, standard state, volume correction, multiple-walkers
+  ninputs: 9
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.10: 1
+    master: 1
+  depends:
+  - 21/004
+  actions: UNITS RESTART UPPER_WALLS DISTANCE METAD PRINT CUSTOM FLUSH BIASVALUE LOWER_WALLS FIXEDATOM
+  modules: setup colvar function bias generic vatom
+  time: 125.30859086500001
+- id: '24.005'
+  title: Path integral metadynamics
+  shortitle: Path integral m...
+  path: lessons/24/005/data/NAVIGATION.html
+  instructors: Guillaume Fraux and Michele Ceriotti
+  doi: 10.1063/5.0215869
+  reference: "Y. Litman, V. Kapil, Y. M. Y. Feldman, D. Tisi, T. Begu\u0161i\u0107, K. Fidanyan, G. Fraux, J. Higer, M. Kellner, T. E. Li, E. S. P\xF3s, E. Stocco, G. Trenins, B. Hirshberg, M. Rossi, M. Ceriotti, i-PI 3.0: A flexible and efficient framework\
+    \ for advanced atomistic simulations. The Journal of Chemical Physics 161 (2024)"
+  ref_url: http://dx.doi.org/10.1063/5.0215869
+  description: Incorporating nuclear quantum effects in metadynamics simulations using path integrals
+  tags: Metadynamics, path integrals, nuclear quantum effects
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - '21.001'
+  - '21.004'
+  actions: DISTANCES DISTANCE METAD SUM PRINT FLUSH LESS_THAN UPPER_WALLS COMBINE
+  modules: colvar function bias generic multicolvar
+  time: 7.059564534999993
+- id: '24.003'
+  title: Benchmarking PLUMED
+  shortitle: Benchmarking PL...
+  path: lessons/24/003/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: This tutorial shows you how to use the plumed benchmark tool to measure the performance of the code
+  tags: developers, benchmark, manual
+  ninputs: 3
+  nfail: 3
+  nfailm: 3
+  inputfails:
+    v2.10: 3
+    master: 3
+  actions: PRINT FLUSH COORDINATION
+  modules: colvar generic
+  time: 17.968030155000008
+- id: '24.002'
+  title: Trans-Cis isomerization in the ground and excited states using PLUMED
+  shortitle: Trans-Cis isome...
+  path: lessons/24/002/data/NAVIGATION.html
+  instructors: Adriana Pietropaolo
+  doi: 10.1063/5.0045944
+  reference: "M. Fortino, C. Cozza, M. Bonomi, A. Pietropaolo, Multi-replica biased sampling for photoswitchable \u03C0-conjugated polymers. The Journal of Chemical Physics 154 (2021)"
+  ref_url: http://dx.doi.org/10.1063/5.0045944
+  description: A guide to perform ground and excited state simulations using PLUMED to simulate a trans to cis isomerization process.
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  actions: WHOLEMOLECULES MATHEVAL CONSTANT PRINT PBMETAD BIASVALUE TORSION
+  modules: colvar bias generic function
+  time: 10.85944099400001
+- id: '24.001'
+  title: "hybrid Small Angle Scattering \u2014 hands-on guide"
+  shortitle: hybrid Small An...
+  path: lessons/24/001/data/NAVIGATION.html
+  instructors: Federico Ballabio
+  doi: 10.1021/acs.jctc.3c00864
+  reference: "F. Ballabio, C. Paissoni, M. Bollati, M. de Rosa, R. Capelli, C. Camilloni, Accurate and Efficient SAXS/SANS Implementation Including Solvation Layer Effects Suitable for Molecular Simulations. Journal of Chemical Theory and Computation 19, 8401\u2013\
+    8413 (2023)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.3c00864
+  description: Practical guide to the use of the hySAS module.
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  actions: RESTRAINT PRINT STATS GYRATION BIASVALUE ENSEMBLE SAXS MOLINFO
+  modules: colvar function bias generic isdb
+  time: 24.86944060899998
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  shortitle: Profiling, GPUs...
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  tags: developers, C++, profiling
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 2.5730623040000182
+- id: '23.002'
+  title: Introduction to the PLUMED parallel features for developers
+  shortitle: Introduction to...
+  path: lessons/23/002/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A simple presentation of some of the available features in PLUMED to simplify the interface with OpenMP and MPI. The lesson contains also a very simple example of how to implement a CV with CUDA.
+  tags: developers, C++, parallelism
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 9.85426815599999
+- id: '22.011'
+  title: Variationally Enhanced Sampling
+  shortitle: Variationally E...
+  path: lessons/22/011/data/NAVIGATION.html
+  instructors: Omar Valsson
+  doi: 10.1021/acs.jctc.2c00197
+  reference: "B. Pampel, O. Valsson, Improving the Efficiency of Variationally Enhanced Sampling with Wavelet-Based Bias Potentials. Journal of Chemical Theory and Computation 18, 4127\u20134141 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.2c00197
+  description: An introduction to running Variationally Enhanced Sampling (VES) using PLUMED.
+  tags: masterclass-2022 Variationally Enhanced Sampling VES
+  ninputs: 14
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.10: 2
+    master: 2
+  actions: HISTOGRAM CONVERT_TO_FES TD_UNIFORM TD_WELLTEMPERED DISTANCE READ PRINT VES_LINEAR_EXPANSION COORDINATION BF_WAVELETS BF_LEGENDRE UPPER_WALLS DUMPGRID OPT_AVERAGED_SGD REWEIGHT_BIAS
+  modules: colvar ves bias generic gridtools
+  time: 91.81696851700002
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  shortitle: Rethinking Meta...
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  doi: 10.1021/acs.jpclett.0c00497
+  reference: "M. Invernizzi, M. Parrinello, Rethinking Metadynamics: From Bias Potentials to Probability Distributions. The Journal of Physical Chemistry Letters 11, 2731\u20132736 (2020)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpclett.0c00497
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  tags: masterclass-2022
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/003
+  - 21/004
+  actions: OPES_METAD OPES_EXPANDED ECV_UMBRELLAS_LINE ENERGY ECV_MULTITHERMAL OPES_METAD_EXPLORE TORSION
+  modules: opes colvar
+  time: 34.22849100500002
+- id: '21.003'
+  title: Umbrella Sampling
+  shortitle: Umbrella Sampli...
+  path: lessons/21/003/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/0021-9991(77)90121-8
+  reference: "G. M. Torrie, J. P. Valleau, Nonphysical sampling distributions in Monte Carlo free-energy estimation: Umbrella sampling. Journal of Computational Physics 23, 187\u2013199 (1977)"
+  ref_url: http://dx.doi.org/10.1016/0021-9991(77)90121-8
+  description: How to calculate statistical averages and free energy surfaces using umbrella sampling
+  tags: masterclass-2021
+  ninputs: 5
+  nfail: 2
+  nfailm: 3
+  inputfails:
+    v2.10: 2
+    master: 3
+  depends:
+  - 21/001
+  - 21/002
+  actions: CONVERT_TO_FES READ RESTRAINT PRINT CUSTOM BIASVALUE MOLINFO DUMPGRID TORSION HISTOGRAM REWEIGHT_BIAS
+  modules: colvar function bias generic gridtools
+  time: 26.577182248999975
+- id: '21.002'
+  title: Statistical errors in MD
+  shortitle: Statistical err...
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.
+  tags: masterclass-2021
+  ninputs: 8
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.10: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: UNITS CONVERT_TO_FES UPPER_WALLS READ RESTRAINT PRINT CONSTANT CUSTOM DISTANCE COM COORDINATIONNUMBER METAD AVERAGE DUMPGRID HISTOGRAM REWEIGHT_BIAS
+  modules: setup colvar function bias generic vatom symfunc gridtools
+  time: 45.14203803599992
